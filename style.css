@@ -15,6 +15,7 @@
   --fc-primary: hsla(0, 0%, 100%, 1);
   --fc-secondary: hsla(232, 17%, 35%, 1); 
   --fc-secondary2: hsla(274, 84%, 12%, 1); 
+  --fc-card: hsla(312, 91%, 96%, 1);
   --fs-primary: 4rem;
   --fs-secondary:2.4rem;
   --fs--secondary2:1.4rem;
@@ -69,7 +70,21 @@ main {
   display: flex;
   flex-direction: column;
   gap: 3.2rem;
+  font-family: var(--ff-primary);
+  font-size: 2rem;
+  color: var(--fc-secondary);
+  position: relative;
+}
+.card p{
+  position: absolute;
+  text-transform: uppercase;
+  border-radius: 2rem;
+  width: 11.2rem;
+  padding: 0 2.4rem;
+  background-color: var(--fc-card);
+  left: 8.8rem;
+  margin-top: 1.6rem;
 }
 .card img{
-  max-width: 32rem;  
+  max-width: 32rem;
 }
