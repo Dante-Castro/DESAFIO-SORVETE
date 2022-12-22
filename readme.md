@@ -1,7 +1,7 @@
 <h1 align="center"> Explorer </h1>
 
 <p align="center">
-Desafio intermediário Stage 3 Mobile First.
+Desafio intermediário Stage 3 SPACE CREAM.
 </p>
 
 <p align="center">
