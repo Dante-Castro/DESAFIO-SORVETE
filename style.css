@@ -10,8 +10,7 @@
   --bg-body: hsla(0,0%,89.8%,1);   
   --bg-texto: hsla(233, 100%, 97%, 1); 
   --bg-secondary: hsla(218, 17%, 62%, 1);
-  --bg-secondary2: hsla(275, 18%, 79%, 1);
-  --bg-secondary3: hsla(0, 0%, 100%, 1);
+  --bg-secondary2: hsla(275, 18%, 79%, 1);  
   --fc-primary: hsla(0, 0%, 100%, 1);
   --fc-secondary: hsla(232, 17%, 35%, 1); 
   --fc-secondary2: hsla(274, 84%, 12%, 1); 
@@ -56,12 +55,15 @@ header{
   font-family: var(--ff-secondary);
   color:var(--fc-secondary2);
   padding: 1.4rem 4.3rem 6.3rem;
+  font-size: 2rem;
+  line-height: 1.5rem;
+  align-items: center;
 }
 main {  
   background-color: var(--bg-texto);
 }
 .imagem{
-  padding: 1.4rem  6.4rem 6rem;
+  padding: 1.4rem 4.1rem 6rem;
   display: flex;
   flex-direction: column;
   gap: 3.2rem;
@@ -75,7 +77,12 @@ main {
   color: var(--fc-secondary);
   position: relative;
 }
+.card:hover{
+  transform: scale(1.1);
+  
+}
 .card p{
+  font-size: 2rem;
   position: absolute;
   text-transform: uppercase;
   border-radius: 2rem;
@@ -87,4 +94,34 @@ main {
 }
 .card img{
   max-width: 32rem;
+  transition: transform 300ms;
+}
+header{
+  animation: topdown 700ms;
+}
+.card{
+  animation: downtop 700ms 350ms backwards;
+  /*animation-iteration-count: infinite;*/
+}
+
+/*animação*/
+@keyframes topdown{
+  0%{
+    opacity: 0;
+    transform: translateY(-15px);
+  }
+  100%{
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes downtop{
+  0%{
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  100%{
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
